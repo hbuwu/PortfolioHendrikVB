@@ -1,0 +1,255 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 2rem;
+  overflow-x: hidden;
+  transition: 0.5s;
+  height: 110vh;
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 3rem;
+  padding-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Courgette', cursive;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+div {
+  width: 80vw;
+  height: 30vw;
+  margin: 3rem auto;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#projects1 div:nth-child(1) {
+  background-image: url("src/indesign1.png");
+  background-size: 100%;
+}
+
+#projects1 div:nth-child(2) {
+  background-image: url("src/indesign2.png");
+  background-size: 100%;
+}
+
+#projects1 div:nth-child(3) {
+  background-image: url("src/indesign3.png");
+  background-size: 100%;
+}
+
+#projects1 div{
+  transition: 0.5s;
+}
+
+#projects1 div:hover{
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+#projects1 div p{
+  opacity: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+#projects1 div:hover p{
+  opacity: 100;
+  transition: 0.5s;
+}
+
+.invisible {
+  display: none;
+}
+
+.invisibleopacity {
+  opacity: 0;
+  transform: translate(0,100vh);
+}
+
+#mainarea {
+  transition: 1s;
+}
+
+#mainarea2 {
+  animation-name: appear;
+  animation-duration: 2s;
+}
+
+.show {
+  display: flex;
+}
+
+.dropdown {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+#cover {
+  background-image: url("src/cover.png");
+  width: auto;
+  height: 40vw;
+  background-size: cover;
+  background-position: left;
+  border: solid black 0.1rem;
+  margin: auto -10vw 5rem;
+}
+
+#intro {
+  width: 80vw;
+  margin: 0 auto 3rem;
+}
+
+nav {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(168, 198, 249, 0.95);
+  padding: 5.6rem 2rem;
+  transition: all 1s;
+  z-index: 1;
+}
+
+nav a {
+  color: rgb(0, 31, 77);
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-bottom: 0.3rem solid rgb(2, 189, 247);
+  display: block;
+  margin-bottom: 2rem;
+  padding-bottom: 0.25rem;
+  text-align: right;
+}
+
+nav a:hover {
+  transition: 0.3s;
+  color: rgb(2, 189, 247);
+  transform: scale(1.05);
+}
+
+.small {
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+#projects1 div{
+  width: 60vw;
+  height: 15vh;
+  border-radius: 1rem;
+  border: 0.3rem solid black;
+}
+
+.about {
+  margin-top: 5rem;
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 700px) {
+    nav {
+      width: 20vw;
+    }
+
+    .invisible {
+      display: inline;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    nav {
+      position: relative;
+      width: auto;
+      height: auto;
+      background-color: white;
+      margin-right: 0rem;
+      margin-top: 0.5rem;
+      padding: 0 0;
+      transition: 0.5s;
+    }
+
+    nav a {
+      color: rgb(0, 31, 77);
+      font-size: 1.8rem;
+      text-decoration: none;
+      display: inline;
+      text-align: right;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    #cover {
+      height: 30vw;
+    }
+
+    #intro {
+      width: 50vw;
+      margin: 0 auto 3rem;
+    }
+
+    #projects1{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+
+    #projects1 div{
+      width: 25vw;
+      height: 15vw;
+    }
+
+    #mainarea2, #mainarea2 div{
+      width: 50vw;
+    }
+
+  }
+}
+
+@keyframes appear {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+
+}

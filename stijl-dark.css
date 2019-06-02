@@ -1,0 +1,37 @@
+body {
+  transition: 0.5s;
+  background-color: rgb(29, 29, 29);
+  color: white;
+}
+
+nav {
+  background-color: rgba(0, 31, 77, 0.95);
+}
+
+nav a {
+  color: rgb(2, 189, 247);
+}
+
+nav a:hover {
+  transition: 0.3s;
+  color: white;
+  transform: scale(1.05);
+}
+
+#cover {
+
+  border: solid white 0.1rem;
+}
+
+#projects1 div, #projects2 div {
+  border: 0.3rem solid white;
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 700px) {
+    nav {
+      background-color: rgb(29, 29, 29);
+        transition: 0.5s;
+    }
+  }
+}
